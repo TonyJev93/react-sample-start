@@ -36,9 +36,6 @@ class PhoneForm extends Component {
                     value={this.state.phone} 
                 />
                 <button type="submit">등록</button>
-                <div>
-                {this.state.userName}  {this.state.phone}
-                </div>
             </form>
         );
     }
