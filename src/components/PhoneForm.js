@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 class PhoneForm extends Component {
+    input = null
+
     state = {
         userName: '',
         phone: '',
@@ -19,6 +21,7 @@ class PhoneForm extends Component {
             userName: '',
             phone: '',
         })
+        this.input.focus();
     }
     render() {
         return (
@@ -28,6 +31,7 @@ class PhoneForm extends Component {
                     placeholder="이름"
                     onChange={this.handleChange} 
                     value={this.state.userName} 
+                    ref={ref => this.input = ref} // ref 사용법
                 />
                 <input 
                     name="phone"
